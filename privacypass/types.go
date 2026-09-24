@@ -11,7 +11,7 @@ import (
 	"errors"
 	"time"
 
-	"github.com/lemon4ksan/foundation/net/http/header"
+	"github.com/lemon4ksan/mach/proto/http/header"
 )
 
 // Standard HTTP Header field names and authentication schemes (RFC 9577 & W3C).

@@ -21,7 +21,7 @@ import (
 	"github.com/lemon4ksan/aoni-browser"
 	"github.com/lemon4ksan/aoni-browser/fingerprint"
 	"github.com/lemon4ksan/aoni-browser/fingerprint/ja4"
-	"github.com/lemon4ksan/foundation/net/dns/svcb"
+	"github.com/lemon4ksan/mach/proto/dns/svcb"
 	"github.com/lemon4ksan/foundation/net/tls/cert"
 )
 

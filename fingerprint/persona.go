@@ -6,7 +6,7 @@
 package fingerprint
 
 import (
-	"github.com/lemon4ksan/foundation/net/http/header"
+	"github.com/lemon4ksan/mach/proto/http/header"
 	utls "github.com/refraction-networking/utls"
 
 	"github.com/lemon4ksan/aoni-browser/fingerprint/h2"

@@ -15,7 +15,7 @@
 package ja4
 
 import (
-	fja4 "github.com/lemon4ksan/foundation/net/tls/ja4"
+	fja4 "github.com/lemon4ksan/aoni/tls/ja4"
 )
 
 // ErrInvalidJA4Input indicates corrupted, incomplete, or truncated ClientHello byte payloads.

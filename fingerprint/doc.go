@@ -18,7 +18,7 @@
 //
 //   - [github.com/lemon4ksan/aoni/fingerprint/ech]: RFC 9460 Encrypted Client Hello configuration parsers and TLS extensions.
 //   - [github.com/lemon4ksan/aoni/fingerprint/grease]: RFC 8701 GREASE reserved values, identification, generation, and filtering.
-//   - [github.com/lemon4ksan/aoni/x/fingerprint/h2]: HTTP/2 SETTINGS, PRIORITY, and HPACK header serialization.
+//   - [github.com/lemon4ksan/aoni/fingerprint/h2]: HTTP/2 SETTINGS, PRIORITY, and HPACK header serialization.
 //   - [github.com/lemon4ksan/aoni/fingerprint/h3]: HTTP/3 QPACK and datagram settings.
 //   - [github.com/lemon4ksan/aoni/fingerprint/ja4]: Pure-Go JA4 and JA4H fingerprint calculation algorithms.
 //   - [github.com/lemon4ksan/aoni/fingerprint/p0f]: OS-level TCP/IP stack signatures (TTL, DF, Window Size).

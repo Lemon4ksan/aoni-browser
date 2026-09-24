@@ -3,9 +3,9 @@ module github.com/lemon4ksan/aoni-browser
 go 1.27.0
 
 require (
-	github.com/lemon4ksan/aoni v0.7.0-rc.1.0.20260920194150-eaab0fb5365d
-	github.com/lemon4ksan/foundation v0.0.0-20260920191713-7709c688b2d7
-	github.com/lemon4ksan/mach v0.0.0-20260920191812-bb7ae0771871
+	github.com/lemon4ksan/aoni v0.7.0-rc.1.0.20260925053548-7bcaa26800c0
+	github.com/lemon4ksan/foundation v0.0.0-20260924183451-121e9f1d1f93
+	github.com/lemon4ksan/mach v0.0.0-20260924165838-4be719b602ef
 	github.com/refraction-networking/utls v1.8.2
 	golang.org/x/net v0.59.0
 )

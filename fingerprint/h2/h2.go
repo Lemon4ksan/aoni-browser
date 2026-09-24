@@ -24,7 +24,7 @@ import (
 
 	"github.com/lemon4ksan/aoni-browser/fingerprint/profiles"
 	"github.com/lemon4ksan/aoni/netutil/netdial"
-	impl "github.com/lemon4ksan/aoni/x/fingerprint/h2"
+	impl "github.com/lemon4ksan/aoni/fingerprint/h2"
 )
 
 var (

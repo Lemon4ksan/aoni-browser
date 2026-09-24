@@ -15,7 +15,7 @@ import (
 	"github.com/lemon4ksan/foundation/testing/require"
 
 	"github.com/lemon4ksan/aoni-browser/fingerprint/profiles"
-	impl "github.com/lemon4ksan/aoni/x/fingerprint/h2"
+	impl "github.com/lemon4ksan/aoni/fingerprint/h2"
 )
 
 func TestH2SettingsFromProfile(t *testing.T) {

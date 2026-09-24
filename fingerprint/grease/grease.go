@@ -4,11 +4,11 @@
 
 // Package grease implements the Generate Random Extensions And Sustain Extensibility (GREASE)
 // mechanism for TLS protocol points strictly conforming to RFC 8701.
-// Core implementation is located in [github.com/lemon4ksan/foundation/net/tls/grease].
+// Core implementation is located in [github.com/lemon4ksan/aoni/tls/grease].
 package grease
 
 import (
-	fgrease "github.com/lemon4ksan/foundation/net/tls/grease"
+	fgrease "github.com/lemon4ksan/aoni/tls/grease"
 )
 
 // ErrNegotiatedGREASE indicates that a peer illegally selected or negotiated a reserved GREASE value.

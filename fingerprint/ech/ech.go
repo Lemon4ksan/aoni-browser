@@ -3,11 +3,11 @@
 // license that can be found in the LICENSE file.
 
 // Package ech implements TLS Encrypted Client Hello strictly conforming to draft-ietf-tls-esni-22.
-// Core implementation is located in [github.com/lemon4ksan/foundation/net/tls/ech].
+// Core implementation is located in [github.com/lemon4ksan/aoni/tls/ech].
 package ech
 
 import (
-	fech "github.com/lemon4ksan/foundation/net/tls/ech"
+	fech "github.com/lemon4ksan/aoni/tls/ech"
 )
 
 // Standard TLS extension type and alert codepoints defined in draft-ietf-tls-esni-22 §11.
