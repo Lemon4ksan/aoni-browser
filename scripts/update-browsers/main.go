@@ -33,6 +33,7 @@ type versionInfo struct {
 	chromeMajor   string
 	firefox       string
 	firefoxMajor  string
+	safari        string
 	ios           string
 	iosUA         string
 	android       string
@@ -58,6 +59,10 @@ func main() {
 	fmt.Printf("Latest Chrome iOS:     %s\n", info.chromeIOS)
 	fmt.Printf("Latest Firefox:        %s (Major/Minor: %s)\n", info.firefox, info.firefoxMajor)
 
+	if info.safari != "" {
+		fmt.Printf("Latest Safari:         %s\n", info.safari)
+	}
+
 	if info.ios != "" {
 		fmt.Printf("Latest iOS:            %s\n", info.ios)
 	}
@@ -82,7 +87,10 @@ func main() {
 		updated = true
 	}
 
-	writeGitHubOutput(info, updated)
+	utlsVer := getUtlsVersion()
+	specDrift, specDiff := runCompareTLSSpec()
+
+	writeGitHubOutput(info, updated, utlsVer, specDrift, specDiff)
 
 	if *dryRun {
 		fmt.Println("\n[DRY RUN] No files modified.")
@@ -107,7 +115,7 @@ func main() {
 	}
 }
 
-func writeGitHubOutput(info versionInfo, updated bool) {
+func writeGitHubOutput(info versionInfo, updated bool, utlsVersion string, specDrift bool, specDiffOutput string) {
 	ghOutput := os.Getenv("GITHUB_OUTPUT")
 	if ghOutput == "" {
 		return
@@ -125,8 +133,33 @@ func writeGitHubOutput(info versionInfo, updated bool) {
 	fmt.Fprintf(f, "chrome_android_version=%s\n", info.chromeAndroid)
 	fmt.Fprintf(f, "chrome_ios_version=%s\n", info.chromeIOS)
 	fmt.Fprintf(f, "firefox_version=%s\n", info.firefox)
+	fmt.Fprintf(f, "safari_version=%s\n", info.safari)
 	fmt.Fprintf(f, "ios_version=%s\n", info.ios)
 	fmt.Fprintf(f, "android_version=%s\n", info.android)
+	fmt.Fprintf(f, "utls_version=%s\n", utlsVersion)
+	fmt.Fprintf(f, "spec_drift=%t\n", specDrift)
+	fmt.Fprintf(f, "spec_diff_output<<EOF\n%s\nEOF\n", specDiffOutput)
+}
+
+func getUtlsVersion() string {
+	cmd := exec.Command("go", "list", "-m", "-f", "{{.Version}}", "github.com/refraction-networking/utls") // #nosec G204
+	out, err := cmd.Output()
+	if err == nil {
+		return strings.TrimSpace(string(out))
+	}
+	return ""
+}
+
+func runCompareTLSSpec() (bool, string) {
+	cmd := exec.CommandContext(context.Background(), "go", "run", "./scripts/compare-tls-spec/") // #nosec G204
+	out, err := cmd.CombinedOutput()
+	outputStr := strings.TrimSpace(string(out))
+	if err != nil {
+		if exitErr, ok := err.(*exec.ExitError); ok && exitErr.ExitCode() == 1 {
+			return true, outputStr
+		}
+	}
+	return false, outputStr
 }
 
 func fetchVersions(client *http.Client) versionInfo {
@@ -154,6 +187,12 @@ func fetchVersions(client *http.Client) versionInfo {
 	info.ios = fetchIOS(client)
 	if info.ios != "" {
 		info.iosUA = strings.ReplaceAll(info.ios, ".", "_")
+		parts := strings.Split(info.ios, ".")
+		if len(parts) >= 2 {
+			info.safari = parts[0] + "." + parts[1]
+		} else {
+			info.safari = info.ios
+		}
 	}
 
 	info.android = fetchAndroid(client)
@@ -390,13 +429,9 @@ func updateSafari(info versionInfo, dryRun bool) bool {
 	content := string(contentBytes)
 	original := content
 
-	if info.ios != "" {
-		parts := strings.Split(info.ios, ".")
-		if len(parts) >= 2 {
-			safariVer := parts[0] + "." + parts[1]
-			reSaf := regexp.MustCompile(`Version/\d+\.\d+`)
-			content = reSaf.ReplaceAllString(content, `Version/`+safariVer)
-		}
+	if info.safari != "" {
+		reSaf := regexp.MustCompile(`Version/\d+\.\d+`)
+		content = reSaf.ReplaceAllString(content, `Version/`+info.safari)
 	}
 
 	if content != original {

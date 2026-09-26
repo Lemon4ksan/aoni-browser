@@ -22,8 +22,6 @@ _«Mimic reality down to the packet margin — where deception becomes mathemati
 
 </div>
 
----
-
 ## Capabilities & Layer Invariants
 
 | Layer | Evasion & Emulation Vectors | Standard / RFC |
@@ -40,16 +38,12 @@ _«Mimic reality down to the packet margin — where deception becomes mathemati
 | **State** | Independent proxy-isolated cookie jars with Cookies Having Independent Partitioned State. | CHIPS / draft-cutler-httpbis-partitioned-cookies |
 | **Anti-Bot** | Automated Turnstile, JavaScript challenges, and Privacy Pass blind signature resolution. | RFC 9260 / RFC 9576 (VOPRF) |
 
----
-
 ## Installation
 
 ```bash
 go get github.com/lemon4ksan/aoni-browser
 go get github.com/lemon4ksan/aoni
 ```
-
----
 
 ## Quickstart
 
@@ -88,8 +82,6 @@ func main() {
 	fmt.Println(resp.Data)
 }
 ```
-
----
 
 ## Advanced Usage
 
@@ -187,8 +179,6 @@ client := aoni.NewClient(nil,
 )
 ```
 
----
-
 ## Option Reference
 
 All options are available under `github.com/lemon4ksan/aoni-browser/option`:
@@ -223,8 +213,6 @@ All options are available under `github.com/lemon4ksan/aoni-browser/option`:
 | `WithChallengeDetector(fn)` | Registers custom WAF / bot challenge detector function. |
 | `WithChallengeSolver(solver)` | Injects automated WAF challenge solver pipeline. |
 
----
-
 ## Architecture (Inversion of Control)
 
 ```
@@ -254,8 +242,6 @@ All options are available under `github.com/lemon4ksan/aoni-browser/option`:
 2. **`OverrideH2Settings`**: Dictates exact browser HTTP/2 SETTINGS frame parameters (table size, stream windows, max header list size).
 3. **`HeaderOrder`**: Governs strict `:method, :authority, :scheme, :path` ordering and header case preservation.
 4. **`ConnFilters`**: Configures L4 socket options (`TCP_MAXSEG`, `SO_RCVBUF`, `IP_TTL`) for p0f OS spoofing.
-
----
 
 ## License
 
