@@ -122,12 +122,12 @@ func TestOption_CertCompression(t *testing.T) {
 	t.Parallel()
 
 	cfg := aoni.Config{}
-	option.WithCertCompression(cert.CompressionBrotli, cert.CompressionZstd)(&cfg)
+	option.WithCertCompression(cert.CertCompressionBrotli, cert.CertCompressionZstd)(&cfg)
 
 	btc := profile.GetOrInitBrowserTLS(&cfg)
 	assert.Len(t, btc.CertCompression, 2)
-	assert.Equal(t, cert.CompressionBrotli, btc.CertCompression[0])
-	assert.Equal(t, cert.CompressionZstd, btc.CertCompression[1])
+	assert.Equal(t, cert.CertCompressionBrotli, btc.CertCompression[0])
+	assert.Equal(t, cert.CertCompressionZstd, btc.CertCompression[1])
 }
 
 func TestOption_ECHConfig(t *testing.T) {

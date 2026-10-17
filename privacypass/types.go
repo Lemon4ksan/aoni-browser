@@ -11,7 +11,7 @@ import (
 	"errors"
 	"time"
 
-	"github.com/lemon4ksan/mach/proto/http/header"
+	"github.com/lemon4ksan/mach/proto/headkit"
 )
 
 // Standard HTTP Header field names and authentication schemes (RFC 9577 & W3C).
@@ -23,10 +23,10 @@ const (
 	HeaderSecPrivateStateToken = "Sec-Private-State-Token"
 
 	// HeaderWWWAuthenticate specifies standard HTTP challenge header (RFC 9110 §11.6.1).
-	HeaderWWWAuthenticate = header.WWWAuthenticate
+	HeaderWWWAuthenticate = headkit.WWWAuthenticate
 
 	// HeaderAuthorization specifies standard HTTP authorization header (RFC 9110 §11.6.2).
-	HeaderAuthorization = header.Authorization
+	HeaderAuthorization = headkit.Authorization
 )
 
 // Common errors returned by Privacy Pass operations.

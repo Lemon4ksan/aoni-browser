@@ -24,6 +24,7 @@ import (
 	"github.com/lemon4ksan/aoni-browser/fingerprint/profiles/safari"
 	"github.com/lemon4ksan/aoni-browser/privacypass"
 	"github.com/lemon4ksan/aoni-browser/profile"
+	"github.com/lemon4ksan/aoni-browser/psl"
 	"github.com/lemon4ksan/aoni-browser/resiliency/challenge"
 	"github.com/lemon4ksan/aoni/cookie"
 	"github.com/lemon4ksan/aoni/mod"
@@ -45,10 +46,10 @@ func WithChrome() aoni.ClientOption {
 		WithProfileVariant(chrome.Desktop, profiles.Windows)(cfg)
 		With0RTT(true)(cfg)
 		WithAutoECH(true)(cfg)
-		WithCertCompression(cert.CompressionBrotli, cert.CompressionZstd)(cfg)
+		WithCertCompression(cert.CertCompressionBrotli, cert.CertCompressionZstd)(cfg)
 
 		if cfg.Engine.CookieJar == nil {
-			cfg.Engine.CookieJar = cookie.NewProxyIsolatedJar()
+			cfg.Engine.CookieJar = cookie.NewProxyIsolatedJar().WithPublicSuffixList(psl.List)
 		}
 
 		hints := fingerprint.BuildClientHintsForOS(chrome.UserAgentWindows, profiles.Windows)
@@ -67,10 +68,10 @@ func WithChromeMobile() aoni.ClientOption {
 		WithProfileVariant(chrome.Mobile, profiles.Android)(cfg)
 		With0RTT(true)(cfg)
 		WithAutoECH(true)(cfg)
-		WithCertCompression(cert.CompressionBrotli, cert.CompressionZstd)(cfg)
+		WithCertCompression(cert.CertCompressionBrotli, cert.CertCompressionZstd)(cfg)
 
 		if cfg.Engine.CookieJar == nil {
-			cfg.Engine.CookieJar = cookie.NewProxyIsolatedJar()
+			cfg.Engine.CookieJar = cookie.NewProxyIsolatedJar().WithPublicSuffixList(psl.List)
 		}
 
 		hints := fingerprint.BuildClientHintsForOS(chrome.UserAgentAndroid, profiles.Android)
@@ -90,10 +91,10 @@ func WithFirefox() aoni.ClientOption {
 		WithProfileVariant(firefox.Desktop, profiles.Windows)(cfg)
 		With0RTT(true)(cfg)
 		WithAutoECH(true)(cfg)
-		WithCertCompression(cert.CompressionBrotli, cert.CompressionZstd)(cfg)
+		WithCertCompression(cert.CertCompressionBrotli, cert.CertCompressionZstd)(cfg)
 
 		if cfg.Engine.CookieJar == nil {
-			cfg.Engine.CookieJar = cookie.NewProxyIsolatedJar()
+			cfg.Engine.CookieJar = cookie.NewProxyIsolatedJar().WithPublicSuffixList(psl.List)
 		}
 	}
 }
@@ -105,10 +106,10 @@ func WithSafari() aoni.ClientOption {
 	return func(cfg *aoni.Config) {
 		WithProfileVariant(safari.Desktop, profiles.MacOS)(cfg)
 		With0RTT(true)(cfg)
-		WithCertCompression(cert.CompressionBrotli)(cfg)
+		WithCertCompression(cert.CertCompressionBrotli)(cfg)
 
 		if cfg.Engine.CookieJar == nil {
-			cfg.Engine.CookieJar = cookie.NewProxyIsolatedJar()
+			cfg.Engine.CookieJar = cookie.NewProxyIsolatedJar().WithPublicSuffixList(psl.List)
 		}
 	}
 }

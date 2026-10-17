@@ -13,7 +13,7 @@ import (
 	"github.com/lemon4ksan/aoni/pipeline"
 )
 
-var headerMapPool = pool.NewPerPStorage(func() map[string]string {
+var headerMapPool = pool.NewPerCorePool(func() map[string]string {
 	return make(map[string]string, 16)
 })
 

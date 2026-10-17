@@ -21,7 +21,7 @@ import (
 	"github.com/lemon4ksan/aoni-browser"
 	"github.com/lemon4ksan/aoni-browser/fingerprint"
 	"github.com/lemon4ksan/aoni-browser/fingerprint/ja4"
-	"github.com/lemon4ksan/mach/proto/dns/svcb"
+	"github.com/lemon4ksan/foundation/net/dns/svcb"
 	"github.com/lemon4ksan/foundation/net/tls/cert"
 )
 
@@ -325,11 +325,11 @@ func applyCertCompression(uConn *utls.UConn, algos []cert.CompressionAlgorithm) 
 	utlsAlgos := make([]utls.CertCompressionAlgo, 0, len(algos))
 	for _, a := range algos {
 		switch a {
-		case cert.CompressionBrotli:
+		case cert.CertCompressionBrotli:
 			utlsAlgos = append(utlsAlgos, utls.CertCompressionBrotli)
-		case cert.CompressionZstd:
+		case cert.CertCompressionZstd:
 			utlsAlgos = append(utlsAlgos, utls.CertCompressionZstd)
-		case cert.CompressionZlib:
+		case cert.CertCompressionZlib:
 			utlsAlgos = append(utlsAlgos, utls.CertCompressionZlib)
 		}
 	}

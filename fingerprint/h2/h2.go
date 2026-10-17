@@ -24,7 +24,6 @@ import (
 
 	"github.com/lemon4ksan/aoni-browser/fingerprint/profiles"
 	"github.com/lemon4ksan/aoni/netutil/netdial"
-	impl "github.com/lemon4ksan/aoni/fingerprint/h2"
 )
 
 var (
@@ -305,7 +304,7 @@ func (ft *FramedTransport) getOrDialH2(ctx context.Context, addr string) (*http2
 
 	alpn := getALPN(conn)
 	if alpn == "h2" {
-		dto := impl.SettingsDTO{
+		dto := SettingsDTO{
 			HeaderTableSize:      ft.settings.HeaderTableSize,
 			EnablePush:           ft.settings.EnablePush,
 			MaxConcurrentStreams: ft.settings.MaxConcurrentStreams,
@@ -319,7 +318,7 @@ func (ft *FramedTransport) getOrDialH2(ctx context.Context, addr string) (*http2
 			PriorityWeight:       ft.settings.PriorityWeight,
 		}
 
-		framed := impl.WrapConn(conn, dto, ft.orderedKeys)
+		framed := WrapConn(conn, dto, ft.orderedKeys)
 
 		cc, err := ft.h2Transport.NewClientConn(framed)
 		if err != nil {

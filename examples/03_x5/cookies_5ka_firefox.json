@@ -1,0 +1,209 @@
+[
+  {
+    "name": "spid",
+    "value": "1784550304034_8cc282d6b8ab5fab053f5f224a06e4f8_ut5s5hnv8gcggmix",
+    "domain": "observability.x5.ru",
+    "path": "/",
+    "expires": "2027-08-24T15:25:03+03:00",
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "spid",
+    "value": "1784550305224_29319a8bbeb30884fee54803a2a398f2_81bbbppa59h3g9qj",
+    "domain": "x5m.x5.ru",
+    "path": "/",
+    "expires": "2027-08-24T15:25:05+03:00",
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "pi",
+    "value": "0NksP4ltuZB5nG0IdqjyAgI3DoljxjLpi+6rog6Ya410xhIitmEbJCoJV8vyu/q+CdQ0x53U077U61Vx/qGGly8Ad1U=",
+    "domain": ".yandex.ru",
+    "path": "/",
+    "expires": "2027-08-24T15:25:02+03:00",
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "i",
+    "value": "aBDtZYxVfLMpyOpbc0M8j1ZuTyjoxZ5kzUqo/xXfIPFoiZkRiO7tbunGh6PyzqhAK/uIm1sqkcxSuPSaRGxWFxY914o=",
+    "domain": ".yandex.ru",
+    "path": "/",
+    "expires": "2027-08-24T15:25:02+03:00",
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "yashr",
+    "value": "581176531784550302",
+    "domain": ".yandex.ru",
+    "path": "/",
+    "expires": "2027-07-20T15:25:02+03:00",
+    "httpOnly": true,
+    "secure": true
+  },
+  {
+    "name": "bh",
+    "value": "YJ6n+NIGahfcyuH/CJLYobEDn8/14QzH4PGOA+CdAg==",
+    "domain": ".yandex.ru",
+    "path": "/",
+    "expires": "2027-08-24T15:25:02+03:00",
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "yabs-sid",
+    "value": "1018701931784550303",
+    "domain": "mc.yandex.ru",
+    "path": "/",
+    "expires": "1970-01-01T02:59:59+03:00",
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "yandexuid",
+    "value": "6161318661784550302",
+    "domain": ".yandex.ru",
+    "path": "/",
+    "expires": "2027-08-24T15:25:03+03:00",
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "yuidss",
+    "value": "6161318661784550302",
+    "domain": ".yandex.ru",
+    "path": "/",
+    "expires": "2027-08-24T15:25:03+03:00",
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "ymex",
+    "value": "2099910303.yrts.1784550303",
+    "domain": ".yandex.ru",
+    "path": "/",
+    "expires": "2027-07-20T15:25:03+03:00",
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "is_gdpr",
+    "value": "0",
+    "domain": ".yandex.ru",
+    "path": "/",
+    "expires": "2027-08-24T15:25:07+03:00",
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "is_gdpr_b",
+    "value": "CM/1YRCvkQM=",
+    "domain": ".yandex.ru",
+    "path": "/",
+    "expires": "2027-08-24T15:25:07+03:00",
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "_yasc",
+    "value": "beNtl35CoBAvr1FQ1vA+LkfKBgS75ztmXYx4scGR3bm3XO68CG+ZLEZGDG2bBkR73XSQ",
+    "domain": ".yandex.ru",
+    "path": "/",
+    "expires": "2027-08-24T15:25:07+03:00",
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "spjs",
+    "value": "1784550299802_42658d9a_01352769_bbf70e556dbe6bc4fe330be16131388c_f8VGVf1FrWXs6ejp6Gnr4In+wq1o3ZTNlWn46fhiCZjJlW307eRmNZzJuWn4YRmoya1l/GB8xb1l+Gfp+MnJaejFvWX8bh2Uzclp6Mm5afhlbcTNxW3kzcVp6Mm5afhk2YTNxW3kzcVt6Mm5afhgGajNtW30ZjWMxclp6MnJaejJxW3kzcVt5k+pS+rv2o/ar47GrnZ+g46jymrqerqvumpzu6b+pv5zzr/f+OntyWlp7OXsZe/l+UWJa4jreGuIwwX9ZezH7nZ+up+v2oqq6vqrtpvDvoZrtv/Kao+v2rp/xsuzy4P8Z49LWWXJKOiYaY/lv0frxovT/7/a2p/amurDjsPL1o7G7sqaqnrqes/PjsP7pu7FjWXo6ehp6kvq+nO7tr6ma/a7qn+q/9qaipq+o/62/paLw8qPv4rv+m3L5svDq4PL9v7aivpv+n+/r85z27aelpvTippviv+6r4pxPeXvofjl6EmJafjp+GnoRNXNak0USOE/Hk9/Ly/7GrcO5+9gm3MLrx6e2+0Mq+r+5w7mX+CbcwqKqlvuaoqqV+rCjkb+ts8K63vtn7/fXx8Wzub+5u726vvtj37Pv48Sbxb+ts8G78nI6StJ6sm8m3MO1s5FDUW+zrs8zLjJvsK/MMix7eFN7MlY5hYWFhYSGhIaHfBNVWYWFhYWFhYWGh3z7eNMlv76+vr6+rq6ur72vra+tr62urq6urr+6e5F5cX97M31rWno6ePJ+FyfewOrEprX6QCr6vrrCupb7JN7Bo6mX+JuiqNJ+olq6MmtZfxkbMWNZfjp+Gs4yYlp9O30b+TNxW3oyalp+GvIya1l/GcMxY1l+OnoaBhpS+nnbe7t9d/CrUnZ+eno5NkbzIX91f3FzfWpqfn5+fnpyeWtxc3F7hXfSJnp6enp2end1d3V3dXt5dn52fnp6dnZ5s0FbYTttG2L6brgsLLGiZ5FLTXt5enkuenh6hhp/cmj+rKrEc2jCx8Pvcntye1JXWX85exl7+ipG2nrSslnKRRt583V/fXvSSlp6Onoaevt523m7fbt5kmpaejp7entZejl2GXrxY1p6Gnr6e9p6sgFT3VtpO2kaevp62nq6apl6eXpZajl6EnL2v/p72nu7eJtre315WX54On52OFpG8QdRTmyusMa77sdPx7f3x6cxbrCvzDItEmayz+vf59+p2EqAhoSGhIWFhn6yclp6kmVTBVghUzt6YhkiUvk6btE+yP7A6rT2/7vuz7uz38/+sJ8xI1t7RTiaWg56ebtq7Xt7ZmnZeUe4Tl4SXloaOhsNe3t7hfmVR3AmcjJ28n69EAF/WXMxKmfHx+fL7vtfwvXD+dpAIlxrX37eE1d/Q2RKbfvYQiBea19+yvtDI19qXH/4ZuxixLP37vtnKxr6nZu5+mjesO73qrdqvr77o7YFrgW7+Lq0Bq8Gut7K+8ex+rTezN7I/rLzV39DZ0tu+9hCIF5oXn3K+0MjX2tffvhm7GLEsvTv+2crGvqemrr6aN6w7vSrtGq+vvujtwavBbv4urQHrAe63sr7x7L7t97M3sj+sdNkT8eT38vL/rh7e32bOHiCh3dZhgcyMyfv8mRL+GZINkn7bzb6tsK6uxlD8frtquGi/rK2tqaump6/sa+xouGvpPK6or//9qquuP+xs9vLTZNafn5+fn5+fn5xelArWe8xcvp+ElJYeHh7e9k5d3vx80Gqdap1qnWqdKl0qXSpd9mSsmJacjpyGnx5YUY6h3wTSlp6Onoaevp72Xu5evFTT/MQy3Yuenq7cNmeilyzcPeTOHmsWJWSsw95uyBu+SbRe7I5pRpeNWl1M5RLPnupn2YxP5JSWTZGE3nzdXt5eXF+eFp+e",
+    "domain": ".5ka.ru",
+    "path": "/",
+    "expires": "2027-08-24T15:25:02+03:00",
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "spsc",
+    "value": "1784550299802_8a9e60ff5edd4e86a290a85d7d900e54_Hp.a3Mwe26-TQnM4kzlok-eiYpwUwKaPHlZhvjMI2UIZ",
+    "domain": ".5ka.ru",
+    "path": "/",
+    "expires": "2027-08-24T15:25:02+03:00",
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "spid",
+    "value": "1784550299802_55ed1c2c4c0064ca75423662e4d863a1_hbopcak10dkcfq49",
+    "domain": ".5ka.ru",
+    "path": "/",
+    "expires": "2027-08-24T15:25:02+03:00",
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "_ym_uid",
+    "value": "1784550303920307492",
+    "domain": ".5ka.ru",
+    "path": "/",
+    "expires": "2027-07-20T15:25:03+03:00",
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "_ym_d",
+    "value": "1784550303",
+    "domain": ".5ka.ru",
+    "path": "/",
+    "expires": "2027-07-20T15:25:03+03:00",
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "next_relogin_tried",
+    "value": "1",
+    "domain": "5ka.ru",
+    "path": "/",
+    "expires": "2026-08-19T15:25:03+03:00",
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "encryptedSessionId",
+    "value": "12f9317deae25e8719252c9ca5744d8b015d7f9db49963174266dc9e85111e75",
+    "domain": "5ka.ru",
+    "path": "/",
+    "expires": "1970-01-01T02:59:59+03:00",
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "5ka_store_id_store",
+    "value": "35XY",
+    "domain": "5ka.ru",
+    "path": "/",
+    "expires": "2026-08-19T15:25:05+03:00",
+    "httpOnly": false,
+    "secure": false
+  },
+  {
+    "name": "server_token",
+    "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0b2tlbiIsInNlc3Npb25JZCI6IjEyZjkzMTdkZWFlMjVlODcxOTI1MmM5Y2E1NzQ0ZDhiMDE1ZDdmOWRiNDk5NjMxNzQyNjZkYzllODUxMTFlNzUiLCJleHAiOjE3ODQ2MzY3MDUsImlhdCI6MTc4NDU1MDMwNSwianRpIjoiOGQ4MGI4NTAtMjVhYi00ZGM5LWExOGUtYjM4NTQxNTgwZWE4In0.16KoVwuZd4EY6YN08K2m0je721zHfD3Jp7Azc1eNiwg",
+    "domain": "5ka.ru",
+    "path": "/",
+    "expires": "2026-07-21T15:25:05+03:00",
+    "httpOnly": false,
+    "secure": true
+  },
+  {
+    "name": "session_token_timestamp",
+    "value": "1784636705752",
+    "domain": "5ka.ru",
+    "path": "/",
+    "expires": "2026-07-21T15:25:05+03:00",
+    "httpOnly": false,
+    "secure": true
+  }
+]

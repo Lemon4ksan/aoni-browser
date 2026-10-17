@@ -26,8 +26,8 @@ import (
 	"mime"
 	"net/http"
 
-	"github.com/lemon4ksan/mach/proto/http/header"
 	"github.com/lemon4ksan/foundation/silicon/bytesconv"
+	"github.com/lemon4ksan/mach/proto/headkit"
 )
 
 // Detector inspects an HTTP response and returns whether it constitutes an anti-bot challenge page.
@@ -74,7 +74,7 @@ func DetectCloudflareChallenge(resp *http.Response) (bool, error) {
 		return false, nil //nolint:nilerr
 	}
 
-	if !isHTMLContentType(resp.Header.Get(header.ContentType)) && !hasHTMLTags(prefix) {
+	if !isHTMLContentType(resp.Header.Get(headkit.ContentType)) && !hasHTMLTags(prefix) {
 		return false, nil
 	}
 
@@ -122,7 +122,7 @@ func isHTMLContentType(contentType string) bool {
 		return false
 	}
 
-	return bytesconv.EqualFoldASCII(mediaType, header.MIMETextHTML) ||
+	return bytesconv.EqualFoldASCII(mediaType, headkit.MIMETextHTML) ||
 		bytesconv.EqualFoldASCII(mediaType, "application/xhtml+xml")
 }
 

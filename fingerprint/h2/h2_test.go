@@ -15,7 +15,6 @@ import (
 	"github.com/lemon4ksan/foundation/testing/require"
 
 	"github.com/lemon4ksan/aoni-browser/fingerprint/profiles"
-	impl "github.com/lemon4ksan/aoni/fingerprint/h2"
 )
 
 func TestH2SettingsFromProfile(t *testing.T) {
@@ -111,7 +110,7 @@ func TestH2FramedConn_PrefaceChecks(t *testing.T) {
 			_ = client.Close()
 		})
 
-		conn := &impl.FramedConn{
+		conn := &FramedConn{
 			Conn: client,
 		}
 
@@ -138,7 +137,7 @@ func TestH2FramedConn_PrefaceChecks(t *testing.T) {
 			_ = client.Close()
 		})
 
-		conn := &impl.FramedConn{
+		conn := &FramedConn{
 			Conn: client,
 		}
 
@@ -166,7 +165,7 @@ func TestH2FramedConn_PrefaceChecks(t *testing.T) {
 			_ = client.Close()
 		})
 
-		conn := &impl.FramedConn{
+		conn := &FramedConn{
 			Conn: client,
 		}
 
@@ -197,7 +196,7 @@ func TestH2FramedConn_PrefaceChecks(t *testing.T) {
 			_ = client.Close()
 		})
 
-		conn := impl.WrapConn(client, impl.SettingsDTO{}, nil)
+		conn := WrapConn(client, SettingsDTO{}, nil)
 
 		done := make(chan struct{})
 		go func() {
@@ -223,9 +222,9 @@ func TestH2FramedConn_WithPriorityFrame(t *testing.T) {
 		_ = client.Close()
 	})
 
-	conn := &impl.FramedConn{
+	conn := &FramedConn{
 		Conn: client,
-		Settings: impl.SettingsDTO{
+		Settings: SettingsDTO{
 			HeaderTableSize:   65536,
 			PriorityStreamDep: 13,
 			PriorityExclusive: true,
@@ -272,9 +271,9 @@ func TestH2FramedConn_WithWindowUpdate(t *testing.T) {
 		_ = client.Close()
 	})
 
-	conn := &impl.FramedConn{
+	conn := &FramedConn{
 		Conn: client,
-		Settings: impl.SettingsDTO{
+		Settings: SettingsDTO{
 			HeaderTableSize: 65536,
 			ConnectionFlow:  15663105, // > 65535, triggers WINDOW_UPDATE frame (0x8)
 		},
@@ -309,7 +308,7 @@ func TestH2FramedConn_WithWindowUpdate(t *testing.T) {
 func TestH2FramedConn_BuildPriorityFrame_TooShort(t *testing.T) {
 	t.Parallel()
 
-	conn := &impl.FramedConn{}
+	conn := &FramedConn{}
 	res := conn.BuildPriorityFrame([]byte{0x00, 0x01})
 	assert.Nil(t, res)
 }

@@ -6,7 +6,7 @@
 package fingerprint
 
 import (
-	"github.com/lemon4ksan/mach/proto/http/header"
+	"github.com/lemon4ksan/mach/proto/headkit"
 	utls "github.com/refraction-networking/utls"
 
 	"github.com/lemon4ksan/aoni-browser/fingerprint/h2"
@@ -33,7 +33,7 @@ var (
 		H2Settings: h2.ChromeSettings,
 		UserAgent:  DefaultUserAgent,
 		HeaderOrder: []string{
-			header.PseudoMethod, header.PseudoAuthority, header.PseudoScheme, header.PseudoPath,
+			headkit.PseudoMethod, headkit.PseudoAuthority, headkit.PseudoScheme, headkit.PseudoPath,
 			"sec-ch-ua", "sec-ch-ua-mobile", "sec-ch-ua-platform",
 			"upgrade-insecure-requests", "user-agent", "accept",
 			"sec-fetch-site", "sec-fetch-mode", "sec-fetch-user",
@@ -49,7 +49,7 @@ var (
 		H2Settings: h2.ChromeSettings,
 		UserAgent:  "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
 		HeaderOrder: []string{
-			header.PseudoMethod, header.PseudoAuthority, header.PseudoScheme, header.PseudoPath,
+			headkit.PseudoMethod, headkit.PseudoAuthority, headkit.PseudoScheme, headkit.PseudoPath,
 			"sec-ch-ua", "sec-ch-ua-mobile", "sec-ch-ua-platform",
 			"upgrade-insecure-requests", "user-agent", "accept",
 			"sec-fetch-site", "sec-fetch-mode", "sec-fetch-user",
@@ -65,7 +65,7 @@ var (
 		H2Settings: h2.FirefoxSettings,
 		UserAgent:  "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0",
 		HeaderOrder: []string{
-			header.PseudoMethod, header.PseudoPath, header.PseudoAuthority, header.PseudoScheme,
+			headkit.PseudoMethod, headkit.PseudoPath, headkit.PseudoAuthority, headkit.PseudoScheme,
 			"user-agent", "accept", "accept-language",
 			"accept-encoding", "referer", "cookie",
 			"upgrade-insecure-requests", "sec-fetch-dest",
@@ -81,7 +81,7 @@ var (
 		H2Settings: h2.FirefoxSettings,
 		UserAgent:  "Mozilla/5.0 (Android 13; Mobile; rv:120.0) Gecko/120.0 Firefox/120.0",
 		HeaderOrder: []string{
-			header.PseudoMethod, header.PseudoPath, header.PseudoAuthority, header.PseudoScheme,
+			headkit.PseudoMethod, headkit.PseudoPath, headkit.PseudoAuthority, headkit.PseudoScheme,
 			"user-agent", "accept", "accept-language",
 			"accept-encoding", "referer", "cookie",
 			"upgrade-insecure-requests", "sec-fetch-dest",
@@ -104,7 +104,7 @@ var (
 		},
 		UserAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Safari/605.1.15",
 		HeaderOrder: []string{
-			header.PseudoMethod, header.PseudoScheme, header.PseudoPath, header.PseudoAuthority,
+			headkit.PseudoMethod, headkit.PseudoScheme, headkit.PseudoPath, headkit.PseudoAuthority,
 			"user-agent", "accept", "accept-language",
 			"accept-encoding", "referer", "cookie",
 		},
@@ -124,7 +124,7 @@ var (
 		},
 		UserAgent: "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/605.1.15",
 		HeaderOrder: []string{
-			header.PseudoMethod, header.PseudoScheme, header.PseudoPath, header.PseudoAuthority,
+			headkit.PseudoMethod, headkit.PseudoScheme, headkit.PseudoPath, headkit.PseudoAuthority,
 			"user-agent", "accept", "accept-language",
 			"accept-encoding", "referer", "cookie",
 		},

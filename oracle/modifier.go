@@ -8,7 +8,7 @@ import (
 	"context"
 	"strings"
 
-	"github.com/lemon4ksan/mach/proto/http/header"
+	"github.com/lemon4ksan/mach/proto/headkit"
 
 	"github.com/lemon4ksan/aoni"
 	"github.com/lemon4ksan/aoni/mod"
@@ -35,7 +35,7 @@ func WithOracle(client *Client, prompt, headerKey string) aoni.RequestModifier {
 
 		// Apply captured headers
 		for k, v := range tokenResp.Headers {
-			if strings.EqualFold(k, header.ContentLength) || strings.EqualFold(k, header.Host) {
+			if strings.EqualFold(k, headkit.ContentLength) || strings.EqualFold(k, headkit.Host) {
 				continue
 			}
 
@@ -43,8 +43,8 @@ func WithOracle(client *Client, prompt, headerKey string) aoni.RequestModifier {
 		}
 
 		// Apply captured cookies if present
-		if tokenResp.Cookies != "" && r.Header(header.Cookie) == "" {
-			r.SetHeader(header.Cookie, tokenResp.Cookies)
+		if tokenResp.Cookies != "" && r.Header(headkit.Cookie) == "" {
+			r.SetHeader(headkit.Cookie, tokenResp.Cookies)
 		}
 
 		// Apply signature token to specified header if provided
